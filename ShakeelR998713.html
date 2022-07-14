@@ -1,0 +1,931 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=9">  -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Anand Diagnostic Laboratory, Online Reports">
+    <meta name="author" content="i-Platina Systems, Bangalore">
+    <link rel="icon" href="https://reports.anandlab.com/v3/bs/favicon.ico">
+    <title>ADL Online reports</title>
+    <link href="https://reports.anandlab.com/v3/cssboot/bootstrap.css" rel="stylesheet">
+    <link href="https://reports.anandlab.com/v3/http://reports.anandlab.com/v3/http://reports.anandlab.com/v3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" media="screen">
+    <link href="https://reports.anandlab.com/v3/css/flexslider.css" rel="stylesheet" media="screen" />
+    <!-- Template CSS -->
+    <link href="https://reports.anandlab.com/v3/css/style_post.css" rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link href="https://reports.anandlab.com/v3/css/responsive.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/popupwindow.css">-->
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="https://reports.anandlab.com/v3/img/icons/favicon1.ico">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://reports.anandlab.com/v3/img/icons/apple-touch-anand-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https:///reports.anandlab.com/v3/img/icons/apple-touch-anand-icon-72x72.png">
+    <link rel="apple-touch-icon" href="https://reports.anandlab.com/v3/img/icons/apple-touch-icon-anand.png">
+    <!-- EXTERNAL SCRIPTS
+		============================================= -->
+    <script src="https://reports.anandlab.com/v3/js/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <!--<script src="js/jquery-1.11.1.js" type="text/javascript"></script> -->
+    <script src="https://reports.anandlab.com/v3/js/json2.js" type="text/javascript"></script>
+    <!--<script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <!--<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script src="https://reports.anandlab.com/v3/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://reports.anandlab.com/v3/js/jpreloader.js" type="text/javascript"></script>
+    <script src="https://reports.anandlab.com/v3/js/retina.js" type="text/javascript"></script>
+    <!-- <script defer src="js/jquery.flexslider.js" type="text/javascript"></script>-->
+    <!-- <script src="js/jquery.accordion.source.js" type="text/javascript"></script>-->
+    <!-- <script src="js/jquery.validate.min.js" type="text/javascript"></script>-->
+    <script src="https://reports.anandlab.com/v3/http://reports.anandlab.com/v3/js/modernizr.custom.js" type="text/javascript"></script>
+    <script src="js/jquery.easing.js" type="text/javascript"></script>
+    <!-- <script src="js/waypoints.min.js" type="text/javascript"></script>-->
+    <!-- <script src="js/custom.js" type="text/javascript"></script>-->
+    <!-- <script src="js/popupwindow.js"></script> -->
+    <!-- <script src="js/demo.js"></script>-->
+    <!--  <script src="js/jquery.ui.datepicker.js"></script> -->
+    <!-- <script src="js/jquery-ui-1.10.4.js"></script>-->
+    <link rel="stylesheet" href="https://reports.anandlab.com/v3/css/jquery-ui-1.10.4.css">
+    <link href="https://reports.anandlab.com/v3/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href='fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,700italic,800,800italic'
+        rel='stylesheet' type='text/css'>
+    <link href='fonts.googleapis.com/css?family=Lato:400,900italic,900,700italic,400italic,300italic,300,100italic,100'
+        rel='stylesheet' type='text/css'>
+    <script src="https://reports.anandlab.com/v3/js/bootbox.min.js" type="text/javascript"></script>
+      <link href="https://reports.anandlab.com/v3/css/logo.css" rel="stylesheet" type="text/css" />
+    <style>
+        .nopadding
+        {
+            padding: 1px !important;
+            margin: 1px !important;
+        }
+        
+        body
+        {
+            background-color: #F2EFEA;
+        }
+        
+        #div_date_info1
+        {
+            padding: 5px;
+            margin: 0;
+            width: auto;
+            background-color: ButtonFace;
+        }
+        
+        #home
+        {
+            margin-top: 0;
+        }
+        
+        .modal.modal-wide .modal-dialog
+        {
+            width: 100%;
+        }
+        
+        .modal-wide .modal-body
+        {
+            overflow-y: auto;
+        }
+        
+        
+        #div_report_list, #div_logout
+        {
+            padding: 10px;
+        }
+        
+        #div_reports
+        {
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 15px;
+        }
+        
+        #div_pending
+        {
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        
+        
+        h1, h2, h3, h4, h5, h6
+        {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        div
+        {
+            padding: 0;
+            float: none;
+        }
+        
+        
+        #container
+        {
+            width: 101%;
+            height: 100%;
+        }
+        
+        .titlebar h1
+        {
+            font-size: 34px !important;
+        }
+        
+        
+        #nav-toggle
+        {
+            margin-top: 7px !important;
+        }
+        
+        #anand_logo
+        {
+            width: 280px;
+        }
+        
+        .wlcm-msg
+        {
+            text-align: left;
+            font-size: 15px;
+        }
+        
+        @media (max-width:240px)
+        {
+            #nav-toggle
+            {
+                padding: 5px;
+                margin-top: 11px !important;
+            }
+        
+            .nav > li
+            {
+                height: 33px !important;
+            }
+        }
+        
+        @media (max-width:380px)
+        {
+            #anand_logo
+            {
+                width: 205px !important;
+            }
+        
+            .navbar-brand
+            {
+                padding: 12px 10px !important;
+            }
+        
+            #nav-toggle
+            {
+                margin-right: 5px !important;
+            }
+        
+        }
+        
+        @media (max-width:640px)
+        {
+            .navbar-brand
+            {
+                padding: 5px 10px !important;
+            }
+            .navbar
+            {
+                height: 60px;
+            }
+        
+        }
+        
+        @media (max-width:768px)
+        {
+            #anand_logo
+            {
+                width: 205px !important;
+            }
+        
+            .navbar-brand
+            {
+                padding: 12px 0px !important;
+            }
+        }
+        
+        @media (min-width:1024px)
+        {
+            #div_reports, #div_pending, #div_logout, #div_change_password_main
+            {
+                width: 50%;
+                margin-left: 25%;
+            }
+        
+            .modal.modal-wide .modal-dialog
+            {
+                width: 80%;
+            }
+        
+        
+        
+        }
+        
+        @media (max-width:1200px)
+        {
+        
+            #home
+            {
+                padding-top: 10px !important;
+            }
+        
+        
+        }
+    </style>
+    <style>
+        #href_1, #href_2
+        {
+            color: Gray;
+            font-weight: bold;
+        }
+        
+        #div_change_password_main
+        {
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+        
+        .input_change_pwd
+        {
+            margin: 2px;
+        }
+        
+        #div_pending
+        {
+            margin-bottom: 2px;
+        }
+    </style>
+
+     <script>
+
+         function ShowAlert(msg) {
+             var tag = "<h4 style='color:red'>" + msg + "</h4>";
+             bootbox.alert(tag);
+         }
+
+         function ShowInfo(msg) {
+             var tag = "<h4 style='color:blue'>" + msg + "</h4>";
+             bootbox.alert(tag);
+         }
+    </script>
+
+    <!-- <script type="text/javascript">
+
+        var UserType = "";
+        var gSESSION_ID = "";
+        var gDisplayReportNotice = "C";
+        var gSelectedObject = null;
+        var gask_feedback = "N";
+        var gIsWalkin = "N";
+        var gLabID = "";
+        var g_winReg;
+        var g_timer;
+        var g_web_key = '';
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+            return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        function CheckSession() {
+
+            var session_id = getParameterByName("sessionid");
+            var parameters = JSON.stringify({ psessionid: session_id });
+            var retVal = '';
+
+            $.ajax({
+                type: "POST",
+                url: "wsLogin.asmx/IsValidSession",
+                data: parameters,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+
+                    retVal = data.d; // data.d is a JSON formatted string, to turn it into a JSON object
+                },
+                error: function (err) {
+                    retVal = "ERROR";
+                    $("#span_error").html("Error in processing the request@load...\r\n" + err.message);
+                }
+            });
+            return retVal;
+        }
+
+        $(document).ready(function () {
+
+            $.ajaxSetup({
+                async: false,
+                cache: false,
+                timeout: 30000
+            });
+
+            if (CheckSession() == 'OK') {
+                display_patient_details();
+            }
+            else {
+                window.location = "index.html";
+            }
+
+        });
+
+
+        $(document).ready(".modal-wide").on("show.bs.modal", function () {
+
+            var height = $(window).height() - 100;
+            $(this).find(".modal-body").css("max-height", height);
+            $(this).find("#div_pdf").css("height", height - 100);
+        });
+
+
+
+        /////On close window
+        $(document).ready('#myModal').on('hidden.bs.modal', function (e) {
+            $("#div_pdf").empty();
+
+            if (gDisplayReportNotice == "P") {
+                gDisplayReportNotice = "C";
+                open_report(gSelectedObject);
+            }
+            else {
+                if (gask_feedback == 'Y') {
+
+                    var width = 600;
+                    var height = 150;
+                    var Wleft, Wtop, swidth, sheight;
+                    swidth = screen.availWidth;
+                    sheight = screen.availHeight;
+
+
+                    Wleft = ((swidth - width) / 2) - 50;
+                    Wtop = ((sheight - height) / 2) - 50;
+
+                    var params = 'width=' + width;
+                    params = params + ', height=' + height;
+                    params = params + ', top=' + Wtop;
+                    params = params + ', left=' + Wleft;
+                    params = params + ',toolbar=no';
+                    params = params + ', menubar=no';
+                    params = params + ', status=no';
+
+                    window.opener = "abc";
+                    if (gIsWalkin == "N")
+                        window.open("confirm_survey.htm", 'login', params);
+                    else {
+                        gIsWalkin == "N";
+                        gask_feedback = "N";
+                        open_feedback();
+                    }
+
+                }
+            }
+        })
+
+
+        function display_patient_details() {
+            var session_id = getParameterByName("sessionid");
+            gSESSION_ID = session_id;
+
+            if (session_id == null || session_id == '') {
+                alert('Invalid session');
+                return;
+            }
+
+            $("#span_error").html("");
+            var parameters = JSON.stringify({ psessionid: session_id });
+            $.ajax({
+                type: "POST",
+                url: "wsLogin.asmx/GetUserDetails",
+                data: parameters,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    var myData = JSON.parse(data.d); // data.d is a JSON formatted string, to turn it into a JSON object
+                    $("#pat_name").html(myData.UserName);
+                    UserType = myData.UserType;
+                    gask_feedback = myData.ask_feedback;
+                    gIsWalkin = myData.isWalkin;
+                    //////
+                    gask_feedback = 'N';
+
+                    g_web_key = myData.web_key;
+
+                    display_reports_walkin(myData.print_receipt, myData.print_covid_letter);
+
+
+                },
+                error: function (err) {
+                    $("#span_error").html("Error in processing the request\r\n" + err.message);
+                }
+            });
+        }
+
+
+        function display_reports_walkin(print_receipt, print_covid_letter) {
+            $("#span_error").html("");
+            var parameters = JSON.stringify({ psessionid: gSESSION_ID });
+            $.ajax({
+                type: "POST",
+                url: "wsLogin.asmx/GetReportStatusWalkIn",
+                data: parameters,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    var myData = JSON.parse(data.d); // data.d is a JSON formatted string, to turn it into a JSON object
+
+                    if (myData.ReportStatus == 'Ready')
+                        $("#div_report_list").append('<p>Report status : <span class="label label-success">' + myData.ReportStatus + '</span></p>');
+                    else
+                        $("#div_report_list").append('<p>Report status : <span class="label label-danger">' + myData.ReportStatus + '</span></p>');
+
+                    //$("#div_report_list").append('<div class="alert alert-danger">' + myData.Message + '<a href="walkin_payment.aspx?sessionid=' + myData.LabID + '&initpage=patient.html?sessionid=' + gSESSION_ID + '" class="button button-success">Pay Now!</a></div>');
+
+
+                    if (myData.Message != "") {
+                        if (myData.PaymentPending == 'Y')
+                        //$("#div_report_list").append('<div class="alert alert-danger">' + myData.Message + '</div>');
+                            $("#div_report_list").append('<div class="alert alert-danger">' + myData.Message + '<a href="walkin_payment.aspx?sessionid=' + myData.LabID + '&initpage=patient.html?sessionid=' + gSESSION_ID + '" class="button button-success">Pay Now!</a></div>');
+                        else
+                            $("#div_report_list").append('<div class="alert alert-danger">' + myData.Message + '</div>');
+
+                    }
+
+                    var tag_info1 = '<div id="div_date_info1" class="well well-lg">';
+                    tag_info1 += '<table><tr><td style="width:50%">Lab ID </td><td>: ' + myData.LabID + '</td></tr>';
+                    tag_info1 += '<tr><td style="width:50%">Reg.Date </td><td>: ' + myData.RegDate + '</td></tr>';
+                    tag_info1 += '<tr><td style="width:50%">Delivery Date </td><td>: ' + myData.DeliveryDate + '</td></tr>';
+
+                    gLabID = myData.LabID;
+
+                    if (print_receipt == 'Y')
+                        tag_info1 += '<tr><td></td><td style="width:50%;"><button id="print_receipt" class="btn btn-sm btn-success" onclick="javascript:open_receipt(this);" value="' + myData.LabID + '">Print Receipt</button></td></tr>';
+
+                    if(print_covid_letter=='Y')
+                        tag_info1 += '<tr><td></td><td style="width:50%;"><button id="covid_certificate" class="btn btn-sm btn-success" onclick="javascript:open_covid_certificate(this);" value="' + g_web_key + '">Print Covid-19 Report Covering Letter</button></td></tr>';
+
+                    tag_info1 += '</table></div>'
+                    $("#div_report_list").append(tag_info1);
+
+                    /*$("#div_report_list").append('<p class="bg-info">Reg.Date       : ' + myData.RegDate + '</p>');
+                    $("#div_report_list").append('<p class="bg-info">Dalivery Date  :' + myData.DeliveryDate + '</p>');
+                    */
+
+
+                    if (myData.ReportList != "") {
+
+                        var tags = "";
+                        var rep_list = myData.ReportList.split("|")
+                        var isMobile = mobilecheck();
+
+                        for (i = 0; i < rep_list.length; i++) {
+                            if (rep_list[i] != "") {
+                                var loc_rep = rep_list[i].split(":");
+
+                                if (isMobile == false)
+                                    tags = '<button type="button" class="btn btn-primary btn-lg btn-block" onclick="javascript:open_report(this);" value="' + loc_rep[1] + '">View ' + loc_rep[0] + '</button>';
+                                else
+                                    tags = '<a href=' + loc_rep[1] + ' class="btn btn-primary btn-lg btn-block" role="button">View ' + loc_rep[0] + '</a>';
+
+
+                                $("#div_report_list").append(tags);
+                            }
+                        }
+                    }
+                    else {
+                        //$("#div_report_list").append('<p><span class="label label-danger">Report file not available</span></p>');
+                    }
+
+
+                    if (myData.PendingReports != "") {
+
+                        var tags = "";
+                        var rep_list = myData.PendingReports.split("|")
+                        $("#div_pending_report_list").append('<ul class="list-group" style="margin:0">  ');
+
+                        for (i = 0; i < rep_list.length; i++) {
+
+                            if ($.trim(rep_list[i]) != '') {
+                                tags = ' <li class="list-group-item list-group-item-warning">' + rep_list[i] + '</li>';
+                                $("#div_pending_report_list").append(tags);
+                            }
+                        }
+                        $("#div_pending_report_list").append("</ul>");
+                        $("#div_pending").show();
+
+                    }
+
+                    var cmd = getParameterByName('cmd');
+                    if(cmd=='receipt')
+                    {
+                        $('#print_receipt').click();
+                    }
+                    //print_receipt
+
+                },
+                error: function (err) {
+                    $("#span_error").html("Error in processing the request\r\n" + err.message);
+                }
+            });
+        }
+
+
+        function open_report(obj) {
+
+
+
+            if (gDisplayReportNotice == "P") 
+            {
+                if (gask_feedback == "N" && gIsWalkin == "Y") 
+                {
+                    //if (confirm("Would you like to give your feedback after the report download?") == true) 
+                    //{
+                    gask_feedback='Y';
+                    //}
+                }
+                gSelectedObject = obj;
+                show_report_notice();
+            }
+            else 
+            {
+
+                var newURL = window.location.protocol + "/" + window.location.host + "/"
+                var url_path = obj.value;
+                var tags = '<iframe src="' + url_path + '" width="100%" height="100%"></iframe>';
+                $("#btn_close_pdf").text('Close');
+                $("#btn_close_pdf2").show();
+                $("#div_pdf").empty();
+                $("#div_pdf").append(tags);
+                $('#myModal').modal('show');
+                
+            }
+        }
+
+        
+
+//        function open_report(obj) 
+//        {
+
+//            if (gDisplayReportNotice == "P") 
+//            {
+//                //Feedback confirmation
+//                if (gask_feedback == "N" && gIsWalkin == "Y") {
+//                    bootbox.confirm({
+//                        title: "Feedback?",
+//                        message: "Would you like to give your feedback after the report download?",
+//                        buttons: {
+//                            cancel: {
+//                                label: '<i class="fa fa-times"></i> Cancel'
+//                            },
+//                            confirm: {
+//                                label: '<i class="fa fa-check"></i> Confirm'
+//                            }
+//                        },
+//                        callback: function (result) {
+
+//                            if (result == true)
+//                                gask_feedback = "Y";
+
+//                            gSelectedObject = obj;
+//                            show_report_notice();
+
+//                        }
+//                    });
+
+//                }
+//                else {
+
+//                    gSelectedObject = obj;
+//                    show_report_notice();
+//                }
+//            }
+//            else 
+//            {
+
+//                var newURL = window.location.protocol + "/" + window.location.host + "/"
+//                var url_path = obj.value;
+//                var tags = '<iframe src="' + url_path + '" width="100%" height="100%"></iframe>';
+//                $("#btn_close_pdf").text('Close');
+//                $("#btn_close_pdf2").show();
+//                $("#div_pdf").empty();
+//                $("#div_pdf").append(tags);
+//                $('#myModal').modal('show');
+//                
+//            }
+
+
+//        }
+
+
+        function open_feedback() {
+
+
+            var newURL = "http://reports.anandlab.com/walkinfeedback/feedback.aspx?labid=" + gLabID;
+            var width = 600;
+            var height = 150;
+            var Wleft, Wtop, swidth, sheight;
+            width = screen.availWidth-200;
+            height = screen.availHeight-150;
+
+
+            Wleft = 20;
+            Wtop = 20;
+
+            var params = 'width=' + width;
+            params = params + ', height=' + height;
+            params = params + ', top=' + Wtop;
+            params = params + ', left=' + Wleft;
+            params = params + ',toolbar=no';
+            params = params + ', menubar=no';
+            params = params + ', status=no';
+
+            window.opener = "abc";
+            g_winReg=window.open(newURL, 'login', params);
+            g_timer = setInterval(checkChild, 500);
+
+
+        }
+
+
+        function checkChild() {
+            if (g_winReg.closed) {
+
+                clearInterval(g_timer);
+
+                show_report_notice2();
+
+
+            }
+        }
+
+        function open_receipt(obj) 
+        {
+            var url_path = "patient_receipt_disclaimer.aspx?labid=" + obj.value;
+            var cmd = getParameterByName('cmd');
+
+            if (cmd == 'receipt') {
+                window.location = url_path;
+            }
+            else {
+                var tags = '<iframe src="' + url_path + '" width="100%" height="100%"></iframe>';
+                $("#btn_close_pdf").text('Close');
+                $("#myModalLabel").text('Print Receipt');
+                $("#btn_close_pdf2").show();
+                $("#div_pdf").empty();
+                $("#div_pdf").append(tags);
+                $('#myModal').modal('show');
+            }
+
+        }
+
+
+        function open_covid_certificate(obj) {
+            var url_path = "covid_certificate.aspx?labid=" + obj.value;
+            var tags = '<iframe src="' + url_path + '" width="100%" height="100%"></iframe>';
+            $("#btn_close_pdf").text('Close');
+            $("#myModalLabel").text('Covid-19 Report Covering Letter');
+            $("#btn_close_pdf2").show();
+            $("#div_pdf").empty();
+            $("#div_pdf").append(tags);
+            $('#myModal').modal('show');
+        }
+
+
+        
+
+        function show_report_notice() {
+            var newURL = window.location.protocol + "/" + window.location.host + "/"
+            var url_path = 'walkin_report_notice.htm';
+            var options = {
+                "backdrop": "static"
+            }
+            var tags = '<iframe src="' + url_path + '" width="100%" height="100%"></iframe>';
+            $("#btn_close_pdf").text('Accept');
+            $("#btn_close_pdf2").hide();
+            $("#div_pdf").empty();
+            $("#div_pdf").append(tags);
+            $('#myModal').modal(options);
+
+            //            open_report(this);
+
+        }
+
+
+
+        function show_report_notice2() {
+            var newURL = window.location.protocol + "/" + window.location.host + "/"
+            var url_path = 'walkinletter.pdf';
+            var options = {
+                "backdrop": "static"
+            }
+
+            $("#myModalLabel").text('Important Announcement');
+            var tags = '<iframe src="' + url_path + '" width="100%" height="100%"></iframe>';
+            $("#btn_close_pdf").text('Close');
+            $("#btn_close_pdf2").hide();
+            $("#div_pdf").empty();
+            $("#div_pdf").append(tags);
+            $('#myModal').modal(options);
+
+            //            open_report(this);
+
+        }
+
+        function mobilecheck() {
+            var check = false;
+            (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        }
+
+    </script> -->
+</head>
+<!--<body>
+    <!-- HEADER
+		============================================= -->
+    <header id="header">
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <!-- Logo & Responsive Menu -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#top-page-banner">
+                        <img id="anand_logo3" src="https://reports.anandlab.com/v3/img/anand_logo.jpg" alt="logo" role="banner" ></a>
+                </div>
+                <!-- /.navbar-header -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.navbar -->
+    </header>
+    <!-- END HEADER -->
+    <div id="content-wrapper">
+        <section id="home">
+            <div class="container">
+                <div class="row">
+                    <span id="span_error" class="label label-danger"></span>
+                </div>
+                <div class="row">
+                    <div id="div_reports">
+                        
+                        <div class="panel panel-primary" style="margin: 0">
+                            <div class="panel-heading" style="margin: 0">
+                                <span id="pat_name">Welcome SHAKEEL RAHMAN</span><div style="text-align: right; float: right">
+                                    <a href="index.html" class="btn btn-primary btn-sm" role="button" onclick="javascript:Logout();">Logout</a></div>
+                            </div>
+                            <div class="panel-body" id="div_report_list">
+                            <p>Report status : <span class="label label-success">Ready</span></p><div id="div_date_info1" class="well well-lg"><table><tbody><tr><td style="width:50%">Lab ID </td><td>: R998713</td></tr><tr><td style="width:50%">Reg.Date </td><td>: 08/07/2022 13:53</td></tr><tr><td style="width:50%">Delivery Date </td><td>: 08/07/2022 18:40</td></tr><tr><td>Test Result</td><td>: Positive</td></tr></tbody></table></div></div>
+                            <div class="panel-footer" id="div_footer">
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="div_pending" hidden="hidden">
+                        <div class="panel panel-warning nopadding">
+                            <div class="panel-heading nopadding">
+                                Pending Reports
+                            </div>
+                            <div class="panel-body" id="div_pending_report_list" style="padding-top: 5px; margin-bottom: 1px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----------------Change Password---------------------------------------->
+                <div class="row">
+                    <div id="div_change_password_main">
+                        <div class="panel-group nopadding" id="div_change_password">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#div_change_password" href="#collapseOne_changepwd"
+                                            id="href_2">Change Password </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne_changepwd" class="panel-collapse collapse">
+                                    <div class="panel-body" id="div_chane_pwd_body nopadding">
+                                        <input type="password" class="form-control input_change_pwd" id="txt_old_pwd" placeholder="Old Password" />
+                                        <input type="password" class="form-control input_change_pwd" id="txt_new_pwd" placeholder="New Password" />
+                                        <input type="password" class="form-control input_change_pwd" id="txt_retype_pwd"
+                                            placeholder="Retype Password" />
+                                        <button id="btn_save_password" name="btn_save_password" onclick="javascript:change_pwd();"
+                                            class="btn btn-primary btn-md btn-block">
+                                            Change Password</button>
+                                        <div id="div_label2">
+                                            <span id="span_change_pwd_msg"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------------------------------------------------------->
+                </div>
+            </div>
+            <script type="text/javascript">
+                function change_pwd() {
+                    $("#span_error").html("");
+                    var old_pwd = $("#txt_old_pwd").val();
+                    var new_pwd = $("#txt_new_pwd").val();
+                    var retype_pwd = $("#txt_retype_pwd").val();
+                    $("#span_change_pwd_msg").removeClass();
+                    $("#span_change_pwd_msg").addClass('label label-danger');
+                    if (old_pwd == '')
+                        $("#span_change_pwd_msg").html('Enter an old password');
+                    else if (new_pwd == '')
+                        $("#span_change_pwd_msg").html('Enter a new password');
+                    else if (retype_pwd == '')
+                        $("#span_change_pwd_msg").html('Retype the new password');
+                    else if (retype_pwd != new_pwd)
+                        $("#span_change_pwd_msg").html('Retype password miss match');
+                    else if (old_pwd == new_pwd)
+                        $("#span_change_pwd_msg").html('New password cannot be same as old password');
+                    else if (new_pwd.length < 6)
+                        $("#span_change_pwd_msg").html('Password length has to be minimum 6 digits');
+                    else {
+                        $("#span_change_pwd_msg").removeClass();
+                        var parameters = JSON.stringify({ psessionid: gSESSION_ID, pold_pwd: old_pwd, pnew_pwd: new_pwd });
+                        $.ajax({
+                            type: "POST",
+                            url: "wsLogin.asmx/ChangePassword",
+                            data: parameters,
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (data) {
+                                var myData = JSON.parse(data.d); // data.d is a JSON formatted string, to turn it into a JSON object
+                                if (myData.Status == 'OK') {
+
+                                    $("#span_change_pwd_msg").html('Password changed successfully');
+                                }
+                                else {
+                                    $("#span_change_pwd_msg").html(myData.Status);
+                                    $("#span_change_pwd_msg").addClass('label label-danger');
+                                }
+                                //label label-danger
+                            },
+                            error: function (err) {
+                                $("#span_error").html("Error in processing the request\r\n" + err.message);
+                            }
+                        });
+
+                    }
+                }
+            </script>
+            <!-- Modal -->
+            <div class="modal modal-wide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" id="btn_close_pdf2">
+                                <span aria-hidden="true">&times;</span><span id="span_close_modal" class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                Lab Report View</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="div_pdf">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="btn_close_pdf" class="btn btn-default" data-dismiss="modal">
+                                Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!--Logout---------------------------------------------------------->
+    <script type="text/javascript">
+        function Logout() {
+            var parameters = JSON.stringify({ psessionid: gSESSION_ID });
+            $.ajax({
+                type: "POST",
+                url: "wsLogin.asmx/LogOut",
+                data: parameters,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                },
+                error: function (err) {
+                    $("#span_error").html("Error in processing the request@change_pwd\r\n" + err.message);
+                }
+            });
+        }
+    </script>
+    
+   
+    
+    
+</body>
+</html>
